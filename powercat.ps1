@@ -512,6 +512,11 @@ Examples:
       $StreamBytesRead = $FuncVars["Stream"].EndRead($FuncVars["StreamReadOperation"])
       if($StreamBytesRead -eq 0){break}
       $Data = $FuncVars["StreamDestinationBuffer"][0..([int]$StreamBytesRead-1)]
+      try{$Data = $Data |ForEach-Object {
+        $_--
+        $_
+      }}
+      catch{}
       $FuncVars["StreamReadOperation"] = $FuncVars["Stream"].BeginRead($FuncVars["StreamDestinationBuffer"], 0, $FuncVars["BufferSize"], $null, $null)
     }
     return $Data,$FuncVars
@@ -519,6 +524,11 @@ Examples:
   function WriteData_TCP
   {
     param($Data,$FuncVars)
+    try{$Data = $Data |ForEach-Object {
+        $_++
+        $_
+    }}
+    catch{}
     $FuncVars["Stream"].Write($Data, 0, $Data.Length)
     return $FuncVars
   }
