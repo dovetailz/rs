@@ -1,0 +1,9 @@
+[watchdog.c::main():110] Watchdog: process 'mini_httpd' exists, score: 3.
+PATH=/sbin:/bin:/usr/sbin:/usr/bin::/usr/local/sbin:/var/sbin
+ap1: dhcpc FAIL
+/etc/udhcpc.ap.script: line 94: /etc/dhclient-exit-hook.in: not found
+rcd: enQ=/usr/sbin/rc_app/rc_check_conn start 
+rcd: [run] deQ =/usr/sbin/rc_app/rc_check_conn start 
+PATH=/sbin:/bin:/usr/sbin:/usr/bin::/usr/local/sbin:/var/sbin
+ap1: dhcpc FAIL
+/etc/udhcpc.ap.script: line 94: /etc/dhclient-exit-hook.in: not found
